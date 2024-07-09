@@ -1,0 +1,127 @@
+.sildebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 12px;
+}
+
+.slidebar-logo i {
+  font-size: 20px;
+  color: blue;
+  margin-right: 10px;
+}
+
+.slidebar-texr h2 {
+  color: #343c6a;
+  font-weight: 800;
+}
+/* --------------------------------------------------------------------------------------------------- */
+
+.slidebar-menu {
+  border-top: 1px solid #e6eff5;
+}
+
+.slidebar-menu i {
+  font-size: 22px;
+  margin-right: 20px;
+}
+
+.slidebar-menu ul {
+  list-style: none;
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.slidebar-menu li {
+  display: flex;
+  align-items: stretch;
+}
+
+.slidebar-menu a {
+  display: flex;
+  color: #b1b1b1;
+  text-decoration: none;
+  padding: 12px 20px;
+  width: 100%;
+}
+/* 
+.slidebar-menu a:hover {
+  box-shadow: 5px 10px 18px #888888;
+  color: #ffffff;
+}
+
+.slidebar-menu li {
+  position: relative;
+}
+
+.slidebar-menu li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #2d60ff;
+  transition: transform 0.3s;
+  z-index: -1;
+}
+
+.slidebar-menu li:hover::before {
+  transform: translateX(100%);
+}
+   */
+
+.slidebar-menu h3 {
+  font-size: 14px;
+}
+
+.active {
+  color: #2d60ff !important;
+  background-color: #dadada;
+}
+
+.p-panelmenu-panel {
+  background-color: aqua;
+}
+
+.slidebar-menup p-panelMenu a {
+  height: 100px;
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+.header-content-text {
+  display: flex;
+  align-items: center;
+}
+
+.header-content-text .main {
+  margin-left: 12px;
+}
+
+.header-content-others {
+  display: flex;
+  align-items: center;
+}
+
+.header-content-others-icon {
+  display: flex;
+}
+
+.header-content-others-icon i {
+  font-size: 16px;
+  padding: 0 12px;
+}
+
+.avatar i {
+  top: 46px;
+  left: 1384px;
+}

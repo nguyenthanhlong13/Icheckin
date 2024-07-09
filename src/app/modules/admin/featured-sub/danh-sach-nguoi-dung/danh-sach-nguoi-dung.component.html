@@ -1,0 +1,120 @@
+<div class="header">
+  <button (click)="showAdd()">Thêm người dùng</button>
+  <form [formGroup]="formAdd">
+    <p-dialog header="{{ label_dialog_fix }}" [modal]="true" [(visible)]="visible" [style]="{width: '50vw'}">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon" style="width: 150px; font-size: 14px;"> Tên Người dùng </span>
+        <input style="font-size: 14px;" type="text" pInputText placeholder="Tên người dùng" formControlName="name" />
+      </div>
+
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon" style="width: 150px; font-size: 14px;"> Email </span>
+        <input style="font-size: 14px;" type="text" pInputText placeholder="Email" formControlName="email" />
+      </div>
+
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon" style="width: 150px; font-size: 14px;"> Mật khẩu </span>
+        <input style="font-size: 14px;" type="text" pInputText placeholder="Mật khẩu" formControlName="password" />
+      </div>
+
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon" style="width: 150px; font-size: 14px;"> Điện thoại </span>
+        <input style="font-size: 14px;"  pInputText placeholder="Điện thoại" formControlName="phone" />
+      </div>
+
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon" style="width: 150px; font-size: 14px;"> Hình ảnh </span>
+        <input style="font-size: 14px;" pInputText placeholder="Hình ảnh" formControlName="image" />
+      </div>
+
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon" style="width: 150px; font-size: 14px;"> Vai trò </span>
+        <input style="font-size: 14px;" pInputText placeholder="Vai trò" formControlName="role" />
+      </div>
+
+      <div class="p-inputgroup">
+          <span class="p-inputgroup-addon" style="width: 150px; font-size: 14px;"> Chức năng </span>
+          <button style="font-size: 16px; color: red;" (click)="submitForm()">{{ label_add }}</button>
+      </div>
+    </p-dialog>
+  </form>
+
+  <form>
+    <div class="search-container">
+      <input  [(ngModel)]="timkiemcontrol" name="timkiemcontrol" type="text" class="search-input" placeholder="Nhập tên để tìm kiếm" />
+      <button style="background-color: #2d60ff; color: #ffffff;"(click)="searchNguoi()" >Tìm kiếm</button>
+      <span class="search-icon">
+        <i class="pi pi-search"></i>
+      </span>
+    </div>
+  </form>
+</div>
+
+<div class="mider">
+  <table style="width: 100%;">
+    <tr>
+      <th>Id</th>
+      <th>Tên người dùng</th>
+      <th>Email</th>
+      <th>Mật khẩu</th>
+      <th>Điện thoại</th>
+      <th>Hình ảnh</th>
+      <th>Vai trò</th>
+      <th>Hành động</th>
+    </tr>
+
+    <tr *ngFor="let item of personList">
+      <td>{{ item.personnel_id }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.email }}</td>
+      <td>{{ item.password }}</td>
+      <td>{{ item.phone }}</td>
+      <td> <img src="{{ item.image }}" style="width: 50px; height: 50px;" alt=""> </td>
+      <td>{{ item.role }}</td>
+
+      <td>
+        <button class="update-btn" (click)="showEdit(item)"> <i class="pi pi-wrench"></i> Sửa</button>
+        <button class="delete-btn" (click)="showDelete(item)"> <i class="pi pi-trash"></i> Xóa</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<p-dialog header="Xác nhận xóa !" [(visible)]="delete" [style]=" { width: '22vw'}" [style]=" { height: '22vw'}" [modal]="true" closeIcon="false">
+  
+  <div class="flex flex-column p-5 surface-overlay border-round">
+    <div class="flex flex-column w-full gap-3 border-bottom-1 surface-border">
+      <i class="pi pi-exclamation-circle" style="font-size: 80px; color: #2d60ff; display: flex; justify-content: center;"></i>
+  </div>
+
+  </div>
+  <h3>Bạn có thực sự muốn xóa không ?</h3>
+  
+  <div style="display: flex; justify-content: space-around; margin-top: 20px">
+    <button
+      (click)="submitDelete()"
+      style="width: 100px; height: 30px; background-color: #2d60ff; 
+      color: #ffffff; border-radius: 6px; font-size: 16px;"
+    >
+      Có xóa
+    </button>
+    <button
+    (click)="noDelete()"
+    style="width: 100px; height: 30px; border: 1px solid #2d60ff ; background-color: #ffffff; 
+      color: #2d60ff; border-radius: 6px; font-size: 16px;"
+    >
+      Không xóa
+    </button>
+  </div>
+</p-dialog>
+
+<!-- <div class="card flex justify-content-center">
+  <p-paginator 
+      (onPageChange)="onPageChange($event)" 
+      [first]="first" 
+      [rows]="rows" 
+      [totalRecords]="120" 
+      [rowsPerPageOptions]="[10, 20, 30]" />
+</div> -->
+
+<p-toast />

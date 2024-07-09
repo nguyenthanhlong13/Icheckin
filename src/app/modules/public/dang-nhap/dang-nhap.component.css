@@ -1,0 +1,165 @@
+.row {
+  max-width: 1400px;
+}
+.form-dangnhap {
+  height: 100vh;
+}
+.col-sm-5 {
+  padding: 0;
+}
+.col-sm-7 {
+  padding: 0;
+}
+
+.form-sign-in-left {
+  background-color: #6caddd;
+  padding: 0 60px;
+}
+
+.form-sign-in-left-logo {
+  display: flex;
+  padding-top: 20px;
+  align-items: center;
+  color: #ffffff;
+}
+
+.form-sign-in-left-logo i {
+  font-size: 26px;
+  margin-right: 4px;
+}
+
+.form-sign-in-left-logo-h3 h3 {
+  font-weight: 800;
+}
+
+.form-sign-in-left-text {
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+.text-top {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.text-bot {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fab1bc;
+}
+
+.form-sign-in-left-img {
+  margin-left: 9em;
+}
+
+.form-sign-in-left-img img {
+  width: 540px;
+ 
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+.form-sign-in-right {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 160px;
+}
+
+.form-sign-in-right-top {
+}
+
+.form-sign-in-right-top-text h1{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.form-sign-in-right-top-icon {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.or {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: #1E1E1E;
+}
+
+.form-sign-in-right-top-icon-gg {
+  display: flex;
+  border: 1px solid #c3c3c3c3;
+  padding: 8px 6px;
+  margin-right: 20px;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.form-sign-in-right-top-icon-gg img {
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  margin-top: 1px;
+}
+
+.form-sign-in-right-top-icon-gg h3 {
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.form-sign-in-right-top-icon-facebook {
+  display: flex;
+  border: 1px solid #c3c3c3c3;
+  padding: 8px 6px;
+  border-radius: 20px;
+}
+
+.form-sign-in-right-top-icon-facebook img {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  margin-top: 3px;
+}
+
+.form-sign-in-right-top-icon-facebook h3 {
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+/* ---------------------------------đăng nhập------------------------------------------------------------ */
+
+.form-sign-in-right-bot form{
+  
+}
+
+.form-sign-in-right-bot input{
+  width: 100%;
+  margin: 20px 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 14px;
+}
+
+.form-sign-in-right-bot input:focus{
+  outline: none;
+}
+
+.form-sign-in-right-bot button{
+  width: 100%;
+  background-color: #6CADDD;
+  color: #ffffff;
+  border: none;
+  padding: 10px 0;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.form-sign-in-right-bot h4{
+  margin-top: 30px;
+}
+
+
+

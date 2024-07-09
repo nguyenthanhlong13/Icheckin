@@ -1,0 +1,138 @@
+<div class="row container form-dangky">
+  <div class="col-sm-5 form-dangky">
+    <div class="form-sign-up-left form-dangky">
+      <div class="form-sign-up-left-logo">
+        <div class="form-sign-up-left-logo-i">
+          <i class="pi pi-spin pi-slack"></i>
+        </div>
+        <div class="form-sign-up-left-logo-h3">
+          <h3>I-Checkin.</h3>
+        </div>
+      </div>
+      <div class="form-sign-up-left-text">
+        <h1 class="text-top">Let your journey</h1>
+        <h1 class="text-bot">Begin!</h1>
+      </div>
+      <div class="form-sign-up-left-img">
+        <img src="/assets/img/dang-ki-2.png" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-7 px-lg-5">
+    <div class="form-sign-up-right">
+      <div class="form-sign-up-right-top">
+        <div class="form-sign-up-right-top-text">
+          <h1>Tạo tài khoản</h1>
+        </div>
+        <div class="form-sign-up-right-top-icon">
+          <div class="form-sign-up-right-top-icon-gg">
+            <img src="/assets/img/google-logo.png" alt="" />
+            <h3>Đăng kí bằng Google</h3>
+          </div>
+          <div class="form-sign-up-right-top-icon-facebook">
+            <img src="/assets/img/facebook-logo.png" alt="" />
+            <h3>Đăng kí bằng Facebook</h3>
+          </div>
+        </div>
+      </div>
+
+      <span class="or"> - hay tạo tài khoản bằng - </span>
+
+      <div class="form-sign-up-right-bot">
+        <form [formGroup]="formSignUp" (ngSubmit)="SubmitSignUp()">
+          <div>
+            <input
+              (keyup)="showname()"
+              id="fullname"
+              placeholder="Họ và tên"
+              formControlName="ho_va_ten"
+            />
+            <div *ngIf="formSignUp['controls']['ho_va_ten'].errors">
+              <small
+                style="color: red"
+                *ngIf="formSignUp['controls']['ho_va_ten'].errors['required']"
+              >
+                Họ và tên không được để trống, Họ và tên nhập tối thiểu 3 ký tự,
+                Họ và tên nhập tối đa 30 ký tự
+              </small>
+              <small
+                style="color: red"
+                *ngIf="formSignUp['controls']['ho_va_ten'].errors['minlength']"
+                >Họ và tên nhập tối thiểu 3 ký tự
+              </small>
+              <small
+                style="color: red"
+                *ngIf="formSignUp['controls']['ho_va_ten'].errors['maxlength']"
+                >Họ và tên không được nhập tối đa 30 ký tự
+              </small>
+            </div>
+          </div>
+
+          <br />
+          <div>
+            <input id="email" placeholder="Email" formControlName="email" />
+            <div *ngIf="formSignUp['controls']['email'].errors">
+              <small
+                style="color: red"
+                *ngIf="formSignUp['controls']['email'].errors['required']"
+              >
+                Email không được để trống, phải nhập đúng định dạng email
+              </small>
+              <small
+                style="color: red"
+                *ngIf="formSignUp['controls']['email'].errors['email']"
+              >
+                Phải nhập đúng định dạng email
+              </small>
+            </div>
+          </div>
+
+          <br />
+          <div>
+            <input
+              id="password"
+              type="password"
+              placeholder="Mật khẩu"
+              formControlName="password"
+            />
+            <div *ngIf="formSignUp['controls']['password'].errors">
+              <small
+                style="color: red"
+                *ngIf="formSignUp['controls']['password'].errors['required']"
+              >
+                Email không được để trống, nhập thiểu phải 6 ký tự
+              </small>
+              <small
+                style="color: red"
+                *ngIf="formSignUp['controls']['password'].errors['minlength']"
+                >Nhập thiểu phải 6 ký tự
+              </small>
+            </div>
+          </div>
+
+          <br />
+          <!-- [disabled]="formSignUp.invalid"  -->
+          <button
+            type="submit"
+            [ngStyle]="{
+              'background-color': formSignUp.valid ? '#6CADDD' : '#c3c3c3c3', 
+            }"
+            
+          >
+            Đăng kí
+          </button>
+        </form>
+
+        <h4>
+          Bạn đã có tài khoản rồi?
+          <span routerLink="/dang-nhap" style="color: #6caddd; cursor: pointer">
+            đăng nhập</span
+          >
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p-toast />

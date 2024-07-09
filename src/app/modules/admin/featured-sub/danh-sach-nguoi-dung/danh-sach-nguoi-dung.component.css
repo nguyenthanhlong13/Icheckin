@@ -1,0 +1,65 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-input {
+  padding-left: 30px; /* Để tạo khoảng cách bên trái để chứa biểu tượng */
+}
+
+.search-icon {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mider {
+  width: 100%;
+}
+
+table {
+  margin-top: 20px;
+  width: 100%;
+}
+
+tr {
+}
+
+th {
+  font-size: 14px;
+  text-align: center;
+  padding: 12px 0;
+}
+
+td {
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+button {
+  margin: 0 6px;
+  border: none;
+
+}
+
+.update-btn {
+}
+
+.delete-btn {
+  color: red;
+}
+
+.p-inputgroup{
+  margin: 10px 0;
+}
+

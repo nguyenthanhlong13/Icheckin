@@ -1,0 +1,80 @@
+<div class="d-flex w-100 flex-row" style="height: 100vh">
+  <div class="h-100" style="width: 240px">
+    <div class="w-100" style="height: 60px; border-right: 1px solid #e6eff5">
+      <div class="sildebar">
+        <div class="slidebar-logo">
+          <i class="pi pi-spin pi-slack"></i>
+        </div>
+        <div class="slidebar-texr">
+          <h2>I-Checkin.</h2>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-100"
+      style="height: calc(100% - 60px); border-right: 1px solid #e6eff5"
+    >
+      <div class="slidebar-menu">
+        <p-panelMenu
+          styleClass="main-menu"
+          [model]="slide_bar"
+          [style]="{ width: '230px' }"
+          [multiple]="true"
+        />
+        <!-- <ul> -->
+        <!-- <li *ngFor=" let menu of menu_routers" > 
+                <a [routerLinkActive]="['active']" routerLink="{{menu.id}}" 
+                (click)="onChangeActive(menu)"> 
+                <i class=" {{menu.icon}} "></i> 
+                <h3>{{menu.title}}</h3> </a> 
+            </li> -->
+        <!-- <li>
+        </ul> -->
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-column h-100" style="width: calc(100% - 200px)">
+    <div class="w-100" style="height: 60px; align-items: center">
+      <div class="header-content">
+        <div class="header-content-text">
+          <h4 class="main">Ứng dụng</h4>
+          <h4 class="main-child" *ngIf="activeTab">
+            <i class="pi pi-angle-right" style="font-size: 10px"></i
+            >{{ activeTab }}
+          </h4>
+          <h4 class="main-child-2" *ngIf="activeTab2">
+            <i class="pi pi-angle-right"></i>{{ activeTab2 }}
+          </h4>
+        </div>
+        <div class="header-content-others">
+          <!-- <form>
+            <span class="p-input-icon-left">
+              <i class="pi pi-search" style=""></i>
+              <input pInputText placeholder="Nhập để tìm kiếm" />
+            </span>
+          </form> -->
+          <div class="header-content-others-icon">
+            <i class="pi pi-cog"></i>
+            <i class="pi pi-bell"></i>
+            <div class="avatar">
+              <p-menu
+                styleClass="avatar-fetured"
+                #menu
+                [model]="items"
+                [popup]="true"
+              />
+              <i class="pi pi-user" (click)="menu.toggle($event)"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="w-100"
+      style="background: #fbfbfb; padding: 15px; height: calc(100% - 60px)"
+    >
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

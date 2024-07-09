@@ -1,0 +1,158 @@
+.row {
+  max-width: 1400px;
+}
+.form-dangky {
+  height: 100vh;
+}
+.col-sm-5 {
+  padding: 0;
+}
+.col-sm-7 {
+  padding: 0;
+}
+
+.form-sign-up-left {
+  background-color: #6caddd;
+  padding: 0 60px;
+}
+
+.form-sign-up-left-logo {
+  display: flex;
+  padding-top: 20px;
+  align-items: center;
+  color: #ffffff;
+}
+
+.form-sign-up-left-logo i {
+  font-size: 26px;
+  margin-right: 4px;
+}
+
+.form-sign-up-left-logo-h3 h3 {
+  font-weight: 800;
+}
+
+.form-sign-up-left-text {
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+.text-top {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.text-bot {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fab1bc;
+}
+
+.form-sign-up-left-img {
+  margin-left: 9em;
+}
+
+.form-sign-up-left-img img {
+  width: 540px;
+ 
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+.form-sign-up-right {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 170px;
+}
+
+.form-sign-up-right-top-text h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-sign-up-right-top-icon {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.or {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #1e1e1e;
+  text-align: center;
+}
+
+.form-sign-up-right-top-icon-gg {
+  display: flex;
+  border: 1px solid #c3c3c3c3;
+  padding: 8px 6px;
+  margin-right: 60px;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.form-sign-up-right-top-icon-gg img {
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  margin-top: 1px;
+}
+
+.form-sign-up-right-top-icon-gg h3 {
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.form-sign-up-right-top-icon-facebook {
+  display: flex;
+  border: 1px solid #c3c3c3c3;
+  padding: 8px 6px;
+  border-radius: 20px;
+}
+
+.form-sign-up-right-top-icon-facebook img {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  margin-top: 3px;
+}
+
+.form-sign-up-right-top-icon-facebook h3 {
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+/* ---------------------------------đăng nhập------------------------------------------------------------ */
+
+.form-sign-up-right-bot form {
+
+}
+
+.form-sign-up-right-bot input {
+  width: 100%;
+  margin: 20px 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 14px;
+}
+
+.form-sign-up-right-bot input:focus {
+  outline: none;
+}
+
+.form-sign-up-right-bot button {
+  width: 100%;
+  background-color: #6caddd;
+  color: #ffffff;
+  border: none;
+  padding: 10px 0;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.form-sign-up-right-bot h4 {
+  margin-top: 30px;
+}

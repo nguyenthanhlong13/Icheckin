@@ -1,0 +1,86 @@
+<div class="row form-dangnhap">
+  <div class="col-sm-5 form-dangnhap">
+    <div class="form-sign-in-left form-dangnhap">
+      <div class="form-sign-in-left-logo">
+        <div class="form-sign-in-left-logo-i">
+          <i class="pi pi-spin pi-slack"></i>
+        </div>
+        <div class="form-sign-in-left-logo-h3">
+          <h3>I-Checkin.</h3>
+        </div>
+      </div>
+      <div class="form-sign-in-left-text">
+        <h1 class="text-top">Let your journey</h1>
+        <h1 class="text-bot">Begin!</h1>
+      </div>
+      <div class="form-sign-in-left-img">
+        <img src="/assets/img/dang-ki-2.png" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-7 px-lg-5">
+    <div class="form-sign-in-right">
+      <div class="form-sign-in-right-top">
+        <div class="form-sign-in-right-top-text">
+          <h1>Đăng nhập</h1>
+        </div>
+        <div class="form-sign-in-right-top-icon">
+          <div class="form-sign-in-right-top-icon-gg">
+            <img src="/assets/img/google-logo.png" alt="" />
+            <h3>Đăng nhập bằng Google</h3>
+          </div>
+          <div class="form-sign-in-right-top-icon-facebook">
+            <img src="/assets/img/facebook-logo.png" alt="" />
+            <h3>Đăng nhập bằng Facebook</h3>
+          </div>
+        </div>
+      </div>
+
+      <span class="or"> - hay đăng nhập bằng - </span>
+
+      <div class="form-sign-in-right-bot">
+        <form [formGroup]="formlogin" (ngSubmit)="onSubmit()">
+          <div>
+            <input id="email" placeholder="Email" formControlName="email" />
+            <div *ngIf="formlogin['controls']['email'].errors">
+              <small style="color: red" *ngIf="formlogin['controls']['email'].errors['required']">
+                Email không được để trống, phải đúng định dạng email
+              </small>
+              <small style="color: red" *ngIf="formlogin['controls']['email'].errors['email']">
+                Phải để đúng định dạng email
+              </small>
+            </div>
+          </div>
+
+          <br />
+
+          <input id="password" type="password" placeholder="Mật khẩu" formControlName="password" />
+          <div *ngIf="formlogin['controls']['password'].errors">
+            <small style="color: red" *ngIf="formlogin['controls']['password'].errors['required']">
+              Mật khẩu không được để trống, nhập tối thiểu 6 ký tự
+            </small>
+            <small style="color: red" *ngIf="formlogin['controls']['password'].errors['minlength']">
+              Nhập tối thiểu 6 ký tự
+            </small>
+          </div>
+          <br />
+          <!-- [disabled]="formlogin.invalid"  -->
+          <button type="submit" [ngStyle]="{
+              'background-color': formlogin.valid ? '#6CADDD' : '#c3c3c3c3'
+            }">
+            Đăng nhập
+          </button>
+        </form>
+
+        <h4>
+          Bạn đã chưa có tài khoản?
+          <span routerLink="/dang-ki" style="color: #6caddd; cursor: pointer">
+            đăng kí</span>
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p-toast />
